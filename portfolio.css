@@ -51,6 +51,7 @@ body {
   justify-content: center;     /* Center horizontally */
   height: 100vh;               /* Take full viewport height */
   text-align: center;          /* Center text inside children */
+  margin-top: 100px;
 }
 
 .portfolio-div{
@@ -96,4 +97,12 @@ body {
   border-radius: 30px;
   margin-top: 0px;
   margin-bottom: 0px;
+}
+
+.col{
+  width: 32px;
+  height: 32px;
+  border-radius: 60px;
+  background-color: black;
+  margin-right: 10px;
 }
