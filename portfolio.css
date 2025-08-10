@@ -52,3 +52,48 @@ body {
   height: 100vh;               /* Take full viewport height */
   text-align: center;          /* Center text inside children */
 }
+
+.portfolio-div{
+  font-size: 110px;
+  font-weight:200;
+}
+.portfolio{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.year-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.year{
+  font-size: 25px;
+  font-weight: 300;
+  border: 1px solid black;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius: 30px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.name-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.name{
+  font-size: 25px;
+  font-weight: 300;
+  border: 1px solid black;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius: 30px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
