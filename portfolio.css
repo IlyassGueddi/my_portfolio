@@ -7,6 +7,9 @@ header{
 .header-div{
   display: flex;
   flex-direction: row;
+  width: 250px;
+  justify-content: space-between;
+  margin-left: 100px;
 }
 
 
@@ -36,4 +39,5 @@ body {
   animation: gradient 20s ease infinite;
   font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #222; /* Dark text for contrast */
+  font-family: "raleway", sans-serif;
 }
