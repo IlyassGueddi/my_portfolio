@@ -1,18 +1,39 @@
-.background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh; /* Full viewport height */
-    z-index: -1;
-
-    
-    background-size: cover;
-}
-
 
 header{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 200px;
+}
+.header-div{
+  display: flex;
+  flex-direction: row;
+}
+
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(
+    -45deg,
+    #e0eafc,   /* Soft Cool Blue */
+    #cfdef3,   /* Pale Gray Blue */
+    #f9f9f9,   /* Almost White */
+    #c9d6ff    /* Light Powder Blue */
+  );
+  background-size: 300% 300%;
+  animation: gradient 20s ease infinite;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; /* Dark text for contrast */
 }
