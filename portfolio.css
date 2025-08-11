@@ -179,3 +179,171 @@ body {
     margin-bottom: 25px; /* More space before description */
     color: #2E2E2E;
 }
+
+/* Add this CSS to your portfolio.css file */
+
+.section-3 {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 40px;
+}
+
+.section-3-div {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.about-title {
+    font-size: 48px;
+    font-weight: 200;
+    color: #2E2E2E;
+    margin: 0;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.about-content {
+    display: flex;
+    gap: 80px;
+    justify-content: space-between;
+}
+
+.about-left, .about-right {
+    flex: 1;
+}
+
+.section-subtitle {
+    font-size: 24px;
+    font-weight: 400;
+    color: #2E2E2E;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* Education & Experience Styles */
+.education-div, .experience-div {
+    margin-bottom: 50px;
+}
+
+.education-item, .experience-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    gap: 20px;
+}
+
+.year-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #666;
+    min-width: 50px;
+    padding: 4px 12px;
+    border: 1px solid #3A3A3A;
+    border-radius: 20px;
+    text-align: center;
+    font-style: italic;
+}
+
+.education-details, .experience-details {
+    flex: 1;
+}
+
+.education-title, .experience-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #2E2E2E;
+    margin: 0 0 5px 0;
+}
+
+.education-location, .experience-description {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+    font-style: italic;
+}
+
+/* Contact Styles */
+.contacts-div {
+    margin-bottom: 50px;
+}
+
+.contact-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.contact-item:last-child {
+    border-bottom: none;
+}
+
+.contact-label {
+    font-weight: 500;
+    color: #2E2E2E;
+    font-size: 16px;
+}
+
+.contact-value {
+    color: #666;
+    font-size: 15px;
+}
+
+/* Skills Styles */
+.skills-category {
+    margin-bottom: 30px;
+}
+
+.skills-category-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #2E2E2E;
+    margin-bottom: 15px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-item {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #444;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        gap: 50px;
+    }
+    
+    .about-title {
+        font-size: 36px;
+    }
+    
+    .section-3 {
+        padding: 60px 20px;
+    }
+}
