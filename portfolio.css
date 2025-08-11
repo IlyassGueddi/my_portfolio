@@ -3,6 +3,8 @@ header{
   display: flex;
   flex-direction: column;
   width: 200px;
+  position: fixed;
+  z-index: 1000;
 }
 .header-div{
   display: flex;
@@ -14,6 +16,9 @@ header{
   font-weight: 300;
 }
 
+.scroll-item {
+    transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+}
 
 @keyframes gradient {
   0% {
@@ -28,7 +33,7 @@ header{
 }
 
 body {
-  height: 100vh;
+  min-height: 200vh;
   margin: 0;
   background: linear-gradient(
     -45deg,
@@ -45,7 +50,7 @@ body {
 }
 
 .section-1 {
-  height: calc(100vh - 190px); /* take full screen height minus header */
+  height: calc(100vh - 0px); /* take full screen height minus header */
   display: flex;
   justify-content: center;    /* vertical centering */
   align-items: center;        /* horizontal centering */
@@ -121,4 +126,56 @@ body {
   border: #333333 solid 1px;
   border-radius: 60px;
   margin-right: 10px;
+}
+
+.section-2 {
+  min-height: 100vh;
+  display: flex;
+  align-items: center; /* Centers vertically */
+  justify-content: center; /* Centers horizontally */
+}
+
+.section-2-div{
+  display: flex;
+  flex-direction: row;
+  /* Remove the fixed left/right padding */
+  /* padding-left: 170px; */
+  /* padding-right: 170px; */
+    
+  /* Replace with responsive padding */
+  padding: 80px 40px;
+  justify-content: center; /* Center the content */
+  align-items: center; /* Align image and text vertically */
+  gap: 60px;
+  max-width: 1200px; /* Limit maximum width */
+  margin: 0 auto; /* Center the container itself */
+}
+
+.profile{
+  border-radius: 12px; /* Subtle rounded corners */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: transform 0.3s ease;
+  width: 250px;
+  max-width: 100%; /* Responsive on smaller screens */
+}
+
+.profile:hover {
+  transform: scale(1.02); /* Gentle zoom on hover */
+}
+
+.text-div{
+  width: 500px;
+  max-width: 100%; /* Responsive on smaller screens */
+}
+
+.description {
+    line-height: 1.7; /* Better line spacing */
+    font-size: 16px;
+    color: #444; /* Slightly softer than pure black */
+    text-align: justify; /* Clean text alignment */
+}
+
+.my-name {
+    margin-bottom: 25px; /* More space before description */
+    color: #2E2E2E;
 }

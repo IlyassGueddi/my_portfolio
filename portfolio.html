@@ -14,7 +14,7 @@
 
 <body>
 
-  <header>
+  <header class="scroll-item">
 
     <div class="header-div">
       <div class="home">
@@ -30,7 +30,7 @@
 
   </header>
 
-  <section class="section-1">
+  <section class="section-1 scroll-item">
 
     <div class="section-1-div">
       <div class="year-div">
@@ -49,6 +49,72 @@
     </div>
 
   </section>
+
+  <section class="section-2 scroll-item">
+
+    <div class="section-2-div">
+      <div class="profile-div">
+        <img class="profile" src="profile.jpg">
+      </div>
+      <div class="text-div">
+        <div class="my-name-div">
+          <h1 class="my-name">
+            Ilyass Gueddi
+          </h1>
+        </div>
+        <div class="description-div">
+          <p class="description">
+            "I’m Mial, a web developer and aspiring AI innovator with a deep passion for turning ideas into digital realities. My work combines a solid foundation in programming and computer science with an eye for clean, modern design. I specialize in building websites that are not only visually engaging but also optimized for performance, usability, and long-term growth. Beyond web development, I explore the potential of artificial intelligence to create smarter, more efficient solutions for clients who want to stay ahead in the digital age. Whether it’s crafting a sleek portfolio site, designing a functional business platform, or experimenting with AI-powered tools, I approach every project with precision, creativity, and a drive to deliver results that truly make an impact."
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <script>
+  function handleScrollBlur() {
+      const scrollItems = document.querySelectorAll('.scroll-item');
+      
+      scrollItems.forEach(item => {
+          const rect = item.getBoundingClientRect();
+          const elementTop = rect.top;
+          const elementHeight = rect.height;
+          
+          // Calculate blur and fade effects
+          let blurAmount = 0;
+          let opacity = 1;
+          let scale = 1;
+          
+          // When element starts going above the top of the screen
+          if (elementTop < 0) {
+              const scrolledUp = Math.abs(elementTop);
+              const maxBlur = 10; // Maximum blur in pixels
+              
+              // Create progressive blur effect
+              blurAmount = Math.min(maxBlur, (scrolledUp / elementHeight) * maxBlur);
+              
+              // Create fade effect
+              opacity = Math.max(0, 1 - (scrolledUp / (elementHeight * 0.8)));
+              
+              // Subtle scale effect
+              scale = Math.max(0.95, 1 - (scrolledUp / (elementHeight * 2)));
+          }
+          
+          // Apply the effects
+          item.style.filter = `blur(${blurAmount}px)`;
+          item.style.opacity = opacity;
+          item.style.transform = `scale(${scale})`;
+      });
+  }
+
+  // Add scroll event listener
+  window.addEventListener('scroll', handleScrollBlur);
+
+  // Initial call
+  handleScrollBlur();
+  </script>
 
 </body>
 </html>
