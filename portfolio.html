@@ -15,22 +15,20 @@
 <body>
 
   <header class="scroll-item">
-
     <div class="header-div">
       <div class="home">
-        <p>HOME</p>
+        <a href="#home" class="nav-link active">HOME</a>
       </div>
       <div class="about">
-        <p>ABOUT</p>
+        <a href="#about" class="nav-link">ABOUT</a>
       </div>
       <div class="projects">
-        <p>PROJECTS</p>
+        <a href="#projects" class="nav-link">PROJECTS</a>
       </div>
     </div>
-
   </header>
 
-  <section class="section-1 scroll-item">
+  <section class="section-1 scroll-item" id="home">
 
     <div class="section-1-div">
       <div class="year-div">
@@ -50,7 +48,7 @@
 
   </section>
 
-  <section class="section-2 scroll-item">
+  <section class="section-2 scroll-item" id="about">
 
     <div class="section-2-div">
       <div class="profile-div">
@@ -73,7 +71,7 @@
   </section>
 
   <!-- Add this new section after your section-2 in HTML -->
-<section class="section-3 scroll-item">
+<section class="section-3 scroll-item" id="projects">
   <div class="section-3-div">
     
     <div class="about-header">
@@ -225,6 +223,41 @@
   // Initial call
   handleScrollBlur();
   </script>
+
+  <script>
+// Navigation highlighting
+function updateActiveNavigation() {
+    const sections = ['home', 'about', 'projects'];
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    let currentSection = 'home'; // default
+    
+    sections.forEach(sectionId => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            const rect = section.getBoundingClientRect();
+            // Check if section is in viewport (with some offset)
+            if (rect.top <= 100 && rect.bottom >= 100) {
+                currentSection = sectionId;
+            }
+        }
+    });
+    
+    // Update active class
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${currentSection}`) {
+            link.classList.add('active');
+        }
+    });
+}
+
+// Update on scroll
+window.addEventListener('scroll', updateActiveNavigation);
+
+// Update on page load
+window.addEventListener('load', updateActiveNavigation);
+</script>
 
 </body>
 </html>
